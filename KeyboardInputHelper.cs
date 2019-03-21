@@ -132,6 +132,7 @@ public class KeyboardInputHelper : MonoBehaviour
                 var next = nextList[i];
                 if (!next || !ignoreList.Contains(next)) continue;
                 if (IsSelectableValid(next, eventSystem)) return next;
+                ignoreList.Add(next);
                 checkStack.Push(next);
             }
         }
